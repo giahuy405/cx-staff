@@ -1,0 +1,341 @@
+:root {
+  --blue: green;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* material input google */
+.input-wrapper {
+  width: 100%;
+  max-width: 360px;
+  position: relative;
+}
+
+.input {
+  height: 37px;
+  font-size: 15px;
+  padding: 11px 15px;
+  border-radius: 4px;
+  border: 1px solid #CBD8E3;
+  width: 100%;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.placeholder {
+  pointer-events: none;
+  position: absolute;
+  font-weight: 400;
+  top: 50%;
+  left: 8px;
+  font-size: 14.5px;
+  transform: translateY(-50%);
+  padding: 0 8px;
+  background-color: white;
+  border-radius: 5px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: grey;
+}
+
+.input:not(:placeholder-shown).input:not(:focus)+.placeholder {
+  transform: scale(.75) translateY(-36px) translateX(-15%);
+  color: #CBD8E3;
+  transition: .2s ease;
+}
+
+.input:focus {
+  border-color: var(--blue);
+
+}
+
+.input:focus+.placeholder {
+  transform: scale(.75) translateY(-36px) translateX(-15%);
+  color: var(--blue);
+  transition: .2s ease;
+}
+
+.input:invalid:not(:placeholder-shown) {
+  transition: .2s ease;
+  border-color: #F52C5C;
+}
+
+.input:invalid:not(:placeholder-shown)+.placeholder {
+  transition: .2s ease;
+  color: #F52C5C;
+}
+
+.input:invalid:not(:placeholder-shown).input:not(:focus)+.placeholder {
+  transform: scale(.75) translateY(-36px) translateX(-15%);
+  color: #F52C5C;
+  transition: .2s ease;
+}
+
+/* wrap side bar */
+.wrap-sidebar {
+  display: flex;
+  min-height: 100vh;
+}
+
+.wrapp-sidebar {
+  min-height: 100vh;
+}
+
+.wrapp-sidebar aside {
+  height: 100%;
+}
+
+/* search bar */
+.search-bar {
+  padding: 8px 15px;
+  border-bottom: 1px solid gainsboro;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.sb-button {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 34px;
+  border-radius: 50%;
+}
+
+.sb-button:hover {
+  background-color: gainsboro;
+}
+
+.form-searchbar {
+  display: flex;
+  gap: 10px;
+}
+
+.form-searchbar button {
+  padding: 8px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid gainsboro;
+  font-size: 16px;
+  line-height: 12px;
+  border-radius: 8px;
+}
+
+.form-searchbar button:hover {
+  border: 1px solid var(--blue);
+  color: var(--blue);
+}
+
+/* main board */
+.main-board {
+  width: 100%;
+}
+
+.ps-open {
+  background-color: rgb(240, 240, 240);
+}
+
+.css-honxw6,
+.css-jn69v9 {
+  width: 7px !important;
+  height: 7px !important;
+}
+
+.pull-right-container {
+  position: absolute;
+  right: 8px;
+
+}
+
+.css-1tqrhto>.ps-menu-button {
+  padding-left: 25px !important;
+  height: auto !important;
+}
+
+.img-dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.ps-menu-label {
+  font-size: 13px !important;
+}
+
+.ps-menu-icon {
+  margin: 0 !important;
+}
+
+.dashboard-content {
+  padding: 10px;
+}
+
+/* ca nhan */
+.canhan-search {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.tab-blv {
+  display: flex;
+  gap: 30px;
+}
+
+.tab-blv a {
+  color: black;
+  border-radius: 6px;
+  padding: 8px;
+  text-decoration: none;
+  border: 1px solid gainsboro;
+}
+
+.tab-blv a:hover {
+  color: green;
+  border: 1px solid green;
+}
+
+.active {
+  color: green !important;
+  border: 1px solid green !important;
+}
+
+.my-tabs {
+  border-bottom: 1px solid gainsboro;
+}
+
+/* .my-tabs a {
+  background-color: white;
+  padding: 8px 8px 2px 8px;
+  border: 1px solid gainsboro;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.my-tabs a.active {
+  border-bottom: none !important;
+} */
+.my-tabs {
+  display: flex;
+  list-style: none;
+  margin-top: 10px;
+  padding-bottom: 4px;
+}
+
+.my-tabs li a {
+  padding: 9px 14px 5px 14px;
+  text-decoration: none;
+  /* border: 1px solid gainsboro; */
+  border-bottom: 0;
+}
+
+.my-tabs li a.active {
+  border-bottom: 0 !important;
+  background-color: white;
+}
+
+.group-btn-action {
+  display: flex;
+  gap: 4px;
+}
+
+.group-btn-action button {
+  font-size: 16px !important;
+}
+
+table,
+tr,
+td {
+  font-size: 12px !important;
+  line-height: 15px !important;
+  vertical-align: middle;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexAlignCenter {
+  display: flex;
+  align-items: center;
+}
+
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.input-group {
+  width: 100%;
+  margin: 12px 0;
+}
+
+.css-w9q2zk-Input2 {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.css-w9q2zk-Input2 input {
+  height: auto;
+}
+.gap5{
+  gap: 5px;
+}
+.gap10 {
+  gap: 10px;
+}
+
+.gap20 {
+  gap: 20px;
+}
+
+input {
+  box-shadow: none;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}

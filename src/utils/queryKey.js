@@ -1,0 +1,6 @@
+export const GET_MENU = 'GET_MENU'
+export const GET_DANH_MUC_HOP_DONG = 'GET_DANH_MUC_HOP_DONG'
+export const XAC_NHAN_DOC_TIN = 'XAC_NHAN_DOC_TIN'
+export const GET_KHACH_HANG = 'GET_KHACH_HANG'
+export const GET_MA_TINH_TRANG_HS = 'GET_MA_TINH_TRANG_HS'
+export const GET_MA_KHACH_HANG = 'GET_MA_KHACH_HANG'
